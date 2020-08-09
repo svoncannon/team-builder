@@ -5,12 +5,15 @@ import Members from './Members'
 
 import { v4 as uuidv4 } from 'uuid'
 
+
+
 function App() {
 
   const initialState = {
     name: '',
     email: '',
-    role: 'Frontend',
+    coderType: 'Quirky',
+    role: 'Frontender',
     id: uuidv4()
   }
 
@@ -36,6 +39,10 @@ function App() {
 
   return (
     <div className="App">
+       <header className="App-header">
+        <h1>Build-A-Team</h1>
+      <p className='welcome-msg'>Build your perfect team, where the style guru puts on too many patches, the unseen and unappreciated fabric heart is the back-end guy, and those front-enders are all the stuffing.</p>
+      </header>
       <Form submit={handleOnSubmit} change={handleOnChange} values={query} />
       <Members members={members} />
     </div>
